@@ -5,8 +5,7 @@ ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.4.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -21,9 +20,26 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+#for ui purpose
+gem 'bootstrap', '~>4.3.1'
 
+gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
+#for font ui
+gem 'font-awesome-sass', '~> 4.6', '>= 4.6.2'
+#for message alert
+gem 'bootstrap-sass-extras', '~> 0.0.2'
+#for authontication purpose
+gem 'devise', '~> 4.7', '>= 4.7.3'
+#for form with fields
+gem 'simple_form'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+gem 'serializer', '~> 1.0', '>= 1.0.2'
+
+gem 'active_model_serializers', '~> 0.10.0'
+
+gem 'whenever', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
@@ -40,6 +56,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.4.4'
 end
 
 group :test do
@@ -48,6 +66,14 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+end
+
+
+group :production do
+  #
+  gem 'rails_12factor', '~> 0.0.3'
+  #
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

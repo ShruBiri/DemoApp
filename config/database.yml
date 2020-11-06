@@ -51,5 +51,6 @@ test:
 production:
   <<: *default
   database: commandsapp_production
-  username: commandsapp
-  password: <%= ENV['COMMANDSAPP_DATABASE_PASSWORD'] %>
+  username: admin
+  password: Password@123
+ 
